@@ -3,9 +3,14 @@
 
 APPNAME=audioNetworkBridge
 
-BINPATH=`pwd`
+sleep 1s
 
-while (true)  
+BINPATH=$(cd $(dirname $0);pwd)
+
+
+echo $(pwd)
+
+while (true)
   do
         pid=$(pidof $APPNAME)
         if [ -z $pid ]

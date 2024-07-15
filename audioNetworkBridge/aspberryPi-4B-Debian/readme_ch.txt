@@ -24,3 +24,38 @@ Distributor ID:	Debian
 Description:	Debian GNU/Linux 12 (bookworm)
 Release:	12
 Codename:	bookworm
+
+自启动
+
+
+1，修改
+
+前提条件：
+需要使用方案1的脚本启动网桥方式；
+
+1，修改
+HI-Player.service.txt中的
+ExecStart=/home/sunhui/AudioNetBridge/startANB.sh &
+
+使用方案1
+/home/sunhui/AudioNetBridge/startANB.sh
+换成你的本地路径，通过 ls 查看本地目录；
+
+保存文件后，在文件管理器界面修改文件名为HI-Player.service
+
+
+2，先SSH进入网桥目录
+
+通过工具PortX把HI-Player.service这个文件上传到网桥目录下
+
+执行
+sudo cp ./HI-Player.service /lib/systemd/system/
+
+3，然后执行下列命令
+
+sudo chmod a+x /lib/systemd/system/HI-Player.service
+sudo systemctl daemon-reload
+sudo systemctl enable HI-Player.service
+
+最后执行重启
+sudo reboot
