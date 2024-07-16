@@ -1,0 +1,10 @@
+[Unit]
+Description=HI-Player-AudioBridge
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/home/sunhui/AudioNetBridge/startANB.sh &
+
+[Install]
+WantedBy=multi-user.target
