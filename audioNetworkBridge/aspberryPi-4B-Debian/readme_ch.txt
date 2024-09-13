@@ -28,10 +28,7 @@ Codename:	bookworm
 自启动
 
 
-1，修改
-
-前提条件：
-需要使用方案1的脚本启动网桥方式；
+自启动
 
 1，修改
 HI-Player.service.txt中的
@@ -39,17 +36,20 @@ ExecStart=/home/sunhui/AudioNetBridge/startANB.sh &
 
 使用方案1
 /home/sunhui/AudioNetBridge/startANB.sh
-换成你的本地路径，通过 ls 查看本地目录；
+换成你的本地路径，通过 pwd查看本地目录；
 
-保存文件后，在文件管理器界面修改文件名为HI-Player.service
+输入pwd后，系统会返回当前路径；
 
+类似这样
+Terrence@raspberrypi-player:~ $ pwd
+/home/Terrence
 
 2，先SSH进入网桥目录
 
-通过工具PortX把HI-Player.service这个文件上传到网桥目录下
+通过工具PortX把HI-Player.service.txt这个文件上传到网桥目录下
 
 执行
-sudo cp ./HI-Player.service /lib/systemd/system/
+sudo cp ./HI-Player.service.txt  /lib/systemd/system/HI-Player.service
 
 3，然后执行下列命令
 
@@ -59,3 +59,5 @@ sudo systemctl enable HI-Player.service
 
 最后执行重启
 sudo reboot
+
+重启后网桥服务自动开启；
