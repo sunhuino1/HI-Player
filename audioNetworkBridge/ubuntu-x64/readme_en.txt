@@ -13,6 +13,6 @@ After the execution of the return exit, the bridge will run in the background, i
 
 
 Method 2
-1. SSH transfers audioNetworkBridge to any directory in the Raspberry PI.
+1. SSH transfers audioNetworkBridge to any directory in the ubuntu
 2. Run chmod a+x./audioNetworkBridge on the terminal
 3. After the execution is complete, run./audioNetworkBridge to run the bridge
