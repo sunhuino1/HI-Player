@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=idle
-ExecStart=sudo /home/sunhui/AudioNetBridge/startANB.sh &
+ExecStart=sudo /home/root/startANB.sh &
 Restart=always
 
 [Install]
