@@ -3,7 +3,7 @@
 sudo apt-get install libasound2-dev
 
 
-1，SSH把所有文件传输到树莓派的任意目录下；
+1，SSH把所有文件传输到系统用户任意目录下；
 2，终端执行 
    chmod a+x ./install.sh
 
