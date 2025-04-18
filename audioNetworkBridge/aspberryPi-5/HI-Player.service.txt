@@ -1,0 +1,10 @@
+[Unit]
+Description=HI-Player-AudioBridge
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/home/HI-Player/anb/startANB.sh &
+
+[Install]
+WantedBy=multi-user.target
