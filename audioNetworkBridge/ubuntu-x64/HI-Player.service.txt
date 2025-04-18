@@ -4,7 +4,7 @@ After=multi-user.target
 
 [Service]
 Type=idle
-ExecStart=/home/sunhui/startANB.sh &
+ExecStart=sudo /home/sunhui/startANB.sh &
 
 [Install]
 WantedBy=multi-user.target
