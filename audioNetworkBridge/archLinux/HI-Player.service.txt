@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=forking
-ExecStart=sudo /home/sunhui/networkAudioBridge/audioNetworkBridge &
+ExecStart=sudo /home/sunhui/networkAudioBridge/audioNetworkBridge
 ExecStop=sudo -/home/sunhui/networkAudioBridge/stopANB.sh
 Restart=always
 #StandardInput=tty
